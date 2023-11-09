@@ -12,7 +12,8 @@ Contents
    :caption: ⚙️ Hardware
    :glob:
    
-   /hardware
+   /hw-getting-started
+   /hw-full-description
 
 .. toctree::
    :maxdepth: 2

@@ -1,8 +1,5 @@
-Hardware
+In-depth view
 =========
-
-Overview
------------------------------
 
 Connectors
 -----------------------------
