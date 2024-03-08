@@ -52,46 +52,48 @@ Internal connectors
 Pinout
 -----------------------------
 
-Pinout for V0.1 board : 
+Pinout for V0.2 board : 
 
 +------------+----------+----------+----------+
 | Function   | Type     | ESP32-S3 | ESP32-C6 |
 +============+==========+==========+==========+
-| Relay 1    | Output   | GPIO38   | GPIO21   |
+| Relay 1    | Output   | GPIO37   |  GPIO20  |
 +------------+----------+----------+----------+
-| Relay 2    | Output   | GPIO21   |  GPIO22  |
+| Relay 2    | Output   | GPIO38   |  GPIO21  |
 +------------+----------+----------+----------+
-| Relay 3    | Output   | GPIO47   |  GPIO23  |
+| Relay 3    | Output   | GPIO39   |  GPIO22  |
 +------------+----------+----------+----------+
-| Relay 4    | Output   | GPIO37   |  GPIO20  |
+| Relay 4    | Output   | GPIO40   |  GPIO23  |
 +------------+----------+----------+----------+
 | User LED   | Output   | GPIO18   |  GPIO10  |
 +------------+----------+----------+----------+
-| User button| Input    | GPIO42   |  GPIO15  |
+| User button| Input    | GPIO0    |  GPIO9   |
 +------------+----------+----------+----------+
-| RS485 TX   | Output   | GPIO35   |  GPIO18  |
+| RS485 TX   | Output   | GPIO36   |  GPIO19  |
 +------------+----------+----------+----------+
-| RS485 RX   | Input    | GPIO48   |  GPIO19  |
+| RS485 RX   | Input    | GPIO35   |  GPIO18  |
 +------------+----------+----------+----------+
 | IO1        | GPIO/ADC | GPIO2    |  GPIO3   |
 +------------+----------+----------+----------+
-| IO2        | GPIO     | GPIO7    |  GPIO7   |
+| IO2        | GPIO     | GPIO1    |  GPIO2   |
 +------------+----------+----------+----------+
-| IO3        | GPIO/ADC | GPIO1    |  GPIO2   |
+| IO3        | GPIO/ADC | GPIO7*   |  GPIO0*  |
 +------------+----------+----------+----------+
-| IO4        | GPIO/ADC | GPIO16   |  GPIO1   |
+| IO4        | GPIO/ADC | GPIO6    |  GPIO6   |
 +------------+----------+----------+----------+
-| IO5        | GPIO/ADC | GPIO15   |  GPIO0   |
+| IO5        | GPIO/ADC | GPIO5    |  GPIO5   |
 +------------+----------+----------+----------+
-| IO6        | GPIO/ADC | GPIO6    |  GPIO6   |
+| IO6        | GPIO/ADC | GPIO4    |  GPIO4   |
 +------------+----------+----------+----------+
+
+*For IO3, you need to solder the right 0R resistor (R1 or R41). See :ref:`Fitted and not fitted components`.
 
 Through J13 connector, some other signals are available : 
 
 +------------+----------+----------+----------+
 | Function   | Type     | ESP32-S3 | ESP32-C6 |
 +============+==========+==========+==========+
-| Interrupt  | Input    | GPIO18   | GPIO10   |
+| Interrupt  | Input    | GPIO8    | GPIO11   |
 +------------+----------+----------+----------+
 | I2C SCL    | Output   | GPIO43   | GPIO16   |
 +------------+----------+----------+----------+
@@ -99,3 +101,16 @@ Through J13 connector, some other signals are available :
 +------------+----------+----------+----------+
 
 Note that user LED and PCB2 interrupt share the same pin.
+
+Fitted and not fitted components
+-----------------------------
+
+For V0.2 only :
+
++------------+------------+------------+
+| Component  | ESP32-S3   | ESP32-C6   |
++============+============+============+
+| R1         | Fitted     | Not fitted |
++------------+------------+------------+
+| R41        | Not fitted | Fitted     |
++------------+------------+------------+
